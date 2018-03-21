@@ -19,6 +19,7 @@
 
 package org.wso2.mprdash.msf4jhttp;
 
+import com.google.common.io.BaseEncoding;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -30,7 +31,7 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.util.Base64;
+import com.google.*;
 
 
 /*
@@ -110,7 +111,7 @@ public class HttpHandler {
     private String encode(String text) {
         String returnString = null;
         try {
-            returnString = Base64.getEncoder().encodeToString(text.getBytes("utf-8"));
+            returnString = BaseEncoding.base64().encode(text.getBytes("utf-8"));
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }

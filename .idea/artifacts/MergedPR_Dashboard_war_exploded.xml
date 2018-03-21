@@ -17,6 +17,7 @@
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4.9" />
           <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.10" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:14.0.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
