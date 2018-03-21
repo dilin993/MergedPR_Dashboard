@@ -1,2 +1,8 @@
-org/wso2/msf4jhttp/PropertyReader.class
-org/wso2/filters/JWTAction.class
+org/wso2/mprdash/serverlets/Versions.class
+org/wso2/mprdash/filters/JWTAction.class
+org/wso2/mprdash/serverlets/SetDoc.class
+org/wso2/mprdash/msf4jhttp/HttpHandler.class
+org/wso2/mprdash/msf4jhttp/RequestHelper.class
+org/wso2/mprdash/serverlets/Products.class
+org/wso2/mprdash/serverlets/Prs.class
+org/wso2/mprdash/msf4jhttp/PropertyReader.class
