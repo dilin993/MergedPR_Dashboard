@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MergedPR_Dashboard:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SampleServlet.war">
+      <element id="artifact" artifact-name="MergedPR_Dashboard:war exploded" />
+    </root>
+  </artifact>
+</component>
