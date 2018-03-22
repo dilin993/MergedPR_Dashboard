@@ -19,17 +19,20 @@ public class Products extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
-        HttpHandler httpHandler = new HttpHandler();
-        String backResponse = httpHandler.get("/products");
-
-        response.setHeader("Access-Control-Allow-Origin", "*");
-        response.setHeader("Access-Control-Allow-Credentials", "true");
-        response.setHeader("Access-Control-Allow-Methods", "POST, GET, HEAD, OPTIONS");
-        response.setHeader("Access-Control-Allow-Headers", "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
 
         try {
+            HttpHandler httpHandler = new HttpHandler();
+            logger.info("Requesting backend /products ...");
+            String backResponse = httpHandler.get("/products");
+
+            response.setHeader("Access-Control-Allow-Origin", "*");
+            response.setHeader("Access-Control-Allow-Credentials", "true");
+            response.setHeader("Access-Control-Allow-Methods", "POST, GET, HEAD, OPTIONS");
+            response.setHeader("Access-Control-Allow-Headers", "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+
             ServletOutputStream out = response.getOutputStream();
             out.print(backResponse);
+            logger.info("Got: " + backResponse);
         } catch (IOException e) {
             logger.error("The response output stream failed");
         }

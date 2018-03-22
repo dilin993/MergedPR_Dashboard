@@ -23,6 +23,7 @@ public class SetDoc extends HttpServlet {
 
         try {
             HttpHandler httpHandler = new HttpHandler();
+            logger.info("Requesting backend /setdoc ...");
             String backResponse = httpHandler.post("/setdoc",getBody(request));
 
             response.setHeader("Access-Control-Allow-Origin", "*");

@@ -16,8 +16,11 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <context-param>
+        <param-name>log4jConfiguration</param-name>
+        <param-value>file:///home/ubuntu/mpr_logs.xml</param-value>
+    </context-param>
 
-    <!-- declares the HelloServlet.java as a named servlet-->
     <servlet>
         <servlet-name>getproducts</servlet-name>
         <servlet-class>org.wso2.mprdash.serverlets.Products</servlet-class>

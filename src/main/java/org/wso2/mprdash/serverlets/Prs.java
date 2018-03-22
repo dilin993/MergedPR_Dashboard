@@ -27,6 +27,7 @@ public class Prs extends HttpServlet {
             String strVersion = request.getParameter("version").replaceAll(" ","%20");
             String strStartDate = request.getParameter("start").replaceAll(" ","%20");
             String strEndDate = request.getParameter("end").replaceAll(" ","%20");
+            logger.info("Requesting backend /prs ...");
             String url = "/prs?product=" + strProduct;
             url += "&version=" + strVersion;
             url += "&start=" + strStartDate;

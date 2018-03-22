@@ -21,6 +21,7 @@ public class Versions extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         try {
             HttpHandler httpHandler = new HttpHandler();
+            logger.info("Requesting backend /versions ...");
             String strProduct = request.getParameter("product").replaceAll(" ","%20");
             String backResponse = httpHandler.get("/versions?product=" + strProduct);
 
