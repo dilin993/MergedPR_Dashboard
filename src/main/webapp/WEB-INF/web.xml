@@ -18,7 +18,7 @@
 
     <context-param>
         <param-name>log4jConfiguration</param-name>
-        <param-value>file:///home/ubuntu/mpr_logs.xml</param-value>
+        <param-value>./classes/log4jconfig.xml</param-value>
     </context-param>
 
     <servlet>
