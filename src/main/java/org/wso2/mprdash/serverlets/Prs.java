@@ -35,6 +35,7 @@ public class Prs extends HttpServlet {
             String backResponse = httpHandler.get(url);
 
             response.setHeader("Access-Control-Allow-Origin", "*");
+            response.setHeader("credentials", "same origin");
             response.setHeader("Access-Control-Allow-Credentials", "true");
             response.setHeader("Access-Control-Allow-Methods", "POST, GET, HEAD, OPTIONS");
             response.setHeader("Access-Control-Allow-Headers", "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
