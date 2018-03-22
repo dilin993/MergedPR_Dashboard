@@ -25,11 +25,11 @@ public class Versions extends HttpServlet {
             String strProduct = request.getParameter("product").replaceAll(" ","%20");
             String backResponse = httpHandler.get("/versions?product=" + strProduct);
 
-            response.setHeader("Access-Control-Allow-Origin", "*");
-            response.setHeader("credentials", "same origin");
-            response.setHeader("Access-Control-Allow-Credentials", "true");
-            response.setHeader("Access-Control-Allow-Methods", "POST, GET, HEAD, OPTIONS");
-            response.setHeader("Access-Control-Allow-Headers", "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+//            response.setHeader("Access-Control-Allow-Origin", "*");
+//            response.setHeader("credentials", "same origin");
+//            response.setHeader("Access-Control-Allow-Credentials", "true");
+//            response.setHeader("Access-Control-Allow-Methods", "POST, GET, HEAD, OPTIONS");
+//            response.setHeader("Access-Control-Allow-Headers", "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
 
             ServletOutputStream out = response.getOutputStream();
             out.print(backResponse);
