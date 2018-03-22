@@ -39,7 +39,7 @@ public class Prs extends HttpServlet {
 //            response.setHeader("Access-Control-Allow-Credentials", "true");
 //            response.setHeader("Access-Control-Allow-Methods", "POST, GET, HEAD, OPTIONS");
 //            response.setHeader("Access-Control-Allow-Headers", "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-
+            response.setContentType("application/json;charset=UTF-8");
             ServletOutputStream out = response.getOutputStream();
             out.print(backResponse);
         } catch (Exception e) {

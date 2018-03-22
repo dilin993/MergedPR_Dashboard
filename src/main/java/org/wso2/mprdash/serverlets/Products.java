@@ -24,16 +24,16 @@ public class Products extends HttpServlet {
             HttpHandler httpHandler = new HttpHandler();
             logger.info("Requesting backend /products ...");
             String backResponse = httpHandler.get("/products");
-
+            logger.info("Got: " + backResponse);
 //            response.setHeader("Access-Control-Allow-Origin", "*");
 //            response.setHeader("credentials", "same origin");
 //            response.setHeader("Access-Control-Allow-Credentials", "true");
 //            response.setHeader("Access-Control-Allow-Methods", "POST, GET, HEAD, OPTIONS");
 //            response.setHeader("Access-Control-Allow-Headers", "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-
+            response.setContentType("application/json;charset=UTF-8");
             ServletOutputStream out = response.getOutputStream();
             out.print(backResponse);
-            logger.info("Got: " + backResponse);
+
         } catch (IOException e) {
             logger.error("The response output stream failed");
         }
