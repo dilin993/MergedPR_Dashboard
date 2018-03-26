@@ -9,15 +9,19 @@
 
     <!--<filter>-->
         <!--<filter-name>AuthenticationFilter</filter-name>-->
-        <!--<filter-class>org.wso2.filters.JWTAction</filter-class>-->
+        <!--<filter-class>org.wso2.mprdash.filters.JWTAction</filter-class>-->
     <!--</filter>-->
+
     <!--<filter-mapping>-->
         <!--<filter-name>AuthenticationFilter</filter-name>-->
         <!--<url-pattern>/*</url-pattern>-->
     <!--</filter-mapping>-->
 
+    <context-param>
+        <param-name>log4jConfiguration</param-name>
+        <param-value>./classes/log4jconfig.xml</param-value>
+    </context-param>
 
-    <!-- declares the HelloServlet.java as a named servlet-->
     <servlet>
         <servlet-name>getproducts</servlet-name>
         <servlet-class>org.wso2.mprdash.serverlets.Products</servlet-class>
